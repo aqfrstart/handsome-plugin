@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>短网址</title>
+  <style>
+    #app {
+      display: flex;
+      flex-direction: column;
+    }
+    .show-color__block {
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+    }
+    .textarea {
+      width: 50%;
+      margin: 10px 0;
+    }
+    .button {
+      width: 100px;
+      height: 30px;
+      background-color: aqua;
+    }
+  </style>
+  <script src="../js/vue.js"></script>
+  <script src="../js/axios.js"></script>
+</head>
+<body>
+  <div id="app">
+    <textarea v-model="longUrl" class="textarea"></textarea>
+    <button @click="long2Short" class="button">生成短网址</button>
+    <textarea v-model="shortUrl" class="textarea"></textarea>
+  </div>
+  <script src="../js/short-url/index.js"></script>
+</body>
+</html>
